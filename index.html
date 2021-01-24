@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-automl"></script>
+<script src="home/w_durcan3393/node_modules/@tensorflow/tfjs/dist/tf.min.js"></script>
+<script src="home/w_durcan3393/node_modules/@tensorflow/tfjs/dist/tfjs-automl"></script>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+<style>
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+</style>
+</head>
+<body>
+<div id="container">
+     <center>
+	<video autoplay="true" id="videoElement"></video>
+</div>
+<div id="predictions-masks" 
+        style="position:absolute;margin-top:28%;left:40%;font-family:Comic Sans MS, cursive, sans-serif; font-size:28px;background-color:#F4D03F">
+     </div>
+<div id="predictions-nomask" 
+        style="position:absolute;margin-top:28%;left:52%;font-family:Comic Sans MS, cursive, sans-serif; font-size:28px;background-color:#F4D03F">
+    </div>
+<button type="button" id="startPredicting" style="position:absolute;width:400px;left:22%;margin-top:35%;background-color:#239B56; font-size:32px; padding: 32px 16px; border-radius: 20px; border: 3px solid #17202A" onclick="startPredicting()"> Start Predicting </button>
+<button type="button" id="stopPredicting" style="position:absolute;width:400px;left:52%;margin-top:35%;background-color:#f44336; font-size:32px; padding: 32px 16px; border-radius: 20px; border: 3px solid #17202A" onclick="stopPredicting()" >Stop Predicting</button>
+<script src= "index.js"></script>
+</center>
+</body>
+</html>
